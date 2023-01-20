@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation: Experiment 1</title>
+</head>
+<body>
+    <h1>Experiment 1</h1>
+    <h2>please open the console to see code!</h2>
+
+    <script>
+        // takes lowercase string and capitalizes the first letter of each word in the string
+        var string = prompt("please enter a sentence!")
+
+        var stringArray = string.split(" ")
+
+        console.log(stringArray)
+
+        for(var i = 0; i < stringArray.length; i++) {
+            console.log(stringArray[i].charAt(0).toUpperCase())
+        }
+
+    </script>
+
+    
+    
+</body>
+</html>
