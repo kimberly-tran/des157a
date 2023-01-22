@@ -19,6 +19,7 @@ body {
     padding-top: 60px;
     font-size: 36px;
     line-height: 60px;
+    letter-spacing: 2px;
 }
 
 #banner h2 {
@@ -28,7 +29,7 @@ body {
 .cloudleft {
     position: absolute;
     left: 60px;
-    top:130px;
+    top:120px;
     animation: floatLeft ease-in-out 10s;
     animation-iteration-count: infinite;
 }
@@ -52,17 +53,17 @@ body {
 
 @keyframes floatLeft {
     0% {left: 60px; top: 130px}
-    20% {left: 130px; top: 160px}
+    20% {left: 130px; top: 150px}
     50% {left: 180px; top: 130px}
-    70% {left: 130px; top: 160px}
+    70% {left: 130px; top: 150px}
     100% {left: 60px; top: 130px}
 }
 
 @keyframes floatRight {
     0% {right: 60px; top: 130px}
-    30% {right: 130px; top: 160px}
+    30% {right: 130px; top: 150px}
     50% {right: 180px; top: 130px}
-    80% {right: 130px; top: 160px}
+    80% {right: 130px; top: 150px}
     100% {right: 60px; top: 130px}
 }
 
@@ -95,31 +96,77 @@ section ul li a {
     padding: 12px 24px;
     margin: 12px;
     text-align: center;
-    /* height: 36px;
-    width: 220px; */
+    width: 210px;
     transition: 0.5s;
 }
 
 section ul li a:hover {
-    background-color: white;
+    background-color: #fafafa;
     transform: scale(1.08);
 }
 
+#carrot1 {
+    position: relative;
+    bottom: -110px;
+    left: 900px;
+}
+
+#carrot2 {
+    position: relative;
+    bottom: -110px;
+    left: 660px;
+}
+
+#carrot3 {
+    position: relative;
+    bottom: -110px;
+    left: 420px;
+}
+
+#carrot1:hover, #carrot2:hover, #carrot3:hover {
+    animation: jump ease-in-out 2s;
+    cursor: pointer;
+}
+
+/* @keyframes jump {
+    0% {bottom: -110px}
+    15% {bottom: 0px; transform: scaleX(0);}
+    60% {bottom: -110px; transform: scaleX(1);}
+    80% {bottom: -105px}
+    100% {bottom: -110px}
+} */
+
+@keyframes jump {
+    0% {bottom: -110px}
+    15% {bottom: 0px;}
+    60% {bottom: -110px;}
+    80% {bottom: -105px}
+    100% {bottom: -110px}
+}
+
 footer {
+    height: 0px;
+}
+
+footer div.content {
     text-align: center;
     background-color: #C5BBB5;
-    color: white;
+    color: #fafafa;
     position: absolute;
     width: 100%;
     left: 0px;
-    padding-top: 10px;
-    padding-bottom: 25px;
+    padding-top: 12px;
+    padding-bottom: 28px;
     font-weight: 400;
     /* font-size: 16px; */
 }
 
 footer a {
     text-decoration: none;
-    color: white;
+    color: #fafafa;
+}
+
+address a:hover {
+    color: #685d56;
 }
 

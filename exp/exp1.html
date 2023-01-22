@@ -16,11 +16,30 @@
 
         var stringArray = string.split(" ")
 
-        console.log(stringArray)
+        // console.log(stringArray)
+
+        var result = ""
 
         for(var i = 0; i < stringArray.length; i++) {
-            console.log(stringArray[i].charAt(0).toUpperCase())
+            if(i != stringArray.length - 1) {
+                result = result.concat(stringArray[i].charAt(0).toUpperCase())
+                result = result.concat(stringArray[i].substring(1,stringArray[i].length) + " ")
+            }
+            else {
+                result = result.concat(stringArray[i].charAt(0).toUpperCase())
+                result = result.concat(stringArray[i].substring(1,stringArray[i].length))
+            }
         }
+
+        // for(var i = 0; i < stringArray.length; i++) {
+        //     if(i != 0) {
+        //         result = result.concat(" ")  
+        //     }
+        //     result = result.concat(stringArray[i].charAt(0).toUpperCase())
+        //     result = result.concat(stringArray[i].substring(1,stringArray[i].length))
+        // }
+
+        console.log(result)
 
     </script>
 
