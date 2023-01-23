@@ -22,6 +22,18 @@ body {
     letter-spacing: 2px;
 }
 
+#banner h1:hover {
+    cursor: pointer;
+    animation: pop ease-in-out 2.5s;
+}
+
+@keyframes pop {
+    0% {transform: scale(1); color: #ecc1ee}
+    30% {transform: scale(1.2); color: #c8d8fc}
+    60% {transform: scale(0.9); color: #bdd0fa}
+    100% {transform: scale(1); color: #c8c3ff}
+}
+
 #banner h2 {
     font-size: 16px;
 }
