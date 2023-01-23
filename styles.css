@@ -105,25 +105,25 @@ section ul li a:hover {
     transform: scale(1.08);
 }
 
-#carrot1 {
+.carrot1 {
     position: relative;
     bottom: -110px;
     left: 900px;
 }
 
-#carrot2 {
+.carrot2 {
     position: relative;
     bottom: -110px;
     left: 660px;
 }
 
-#carrot3 {
+.carrot3 {
     position: relative;
     bottom: -110px;
     left: 420px;
 }
 
-#carrot1:hover, #carrot2:hover, #carrot3:hover {
+.carrot1:hover, .carrot2:hover, .carrot3:hover {
     animation: jump ease-in-out 2s;
     cursor: pointer;
 }
