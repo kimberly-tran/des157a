@@ -1,0 +1,91 @@
+body {
+    font-family: "DM Sans";
+    width: 1100px;
+    background-color: #D7E4EB;
+    color: #222c39;
+    font-weight: 500;
+    margin: auto;
+    display: flex;
+}
+
+header {
+    width: 100px;
+    position: fixed;
+    top: 200px;
+    left: 130px;
+}
+
+main {
+    width: 60%;
+    position: relative;
+    margin-left: 480px;
+    margin-top: 100px;
+}
+
+main h2 {
+    font-family: "Roboto Mono";
+    letter-spacing: 0.5px;
+    margin-top: 0px;
+    line-height: 30px;
+}
+
+main p {
+    line-height: 24px;
+}
+
+h1 {
+    font-family: "Roboto Mono";
+    font-size: 36px;
+    line-height: 60px;
+    letter-spacing: 1.5px;
+    color: #222c39;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    padding: 40px;
+    width: 200px;
+    transition: 0.5s;
+}
+
+h1:hover {
+    background-color: #fafafa;
+    cursor: pointer;
+}
+
+div.cloud {
+    background-image: url(../images/cloud.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 130px;
+    height: 100px;
+    position: relative;
+}
+
+div.cloud date {
+    position: absolute;
+    font-family: "Roboto Mono";
+    left: 28px;
+    top: 38px;
+    font-size: 14px;
+    text-align: center;
+    color: #454d58;
+}
+
+article {
+    margin-bottom: 60px;
+}
+
+div.content {
+    background-color: rgba(250, 250, 250, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+article p {
+    font-size: 17px;
+    margin-bottom: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(255, 166, 0);
+}

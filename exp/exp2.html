@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Experimentation: Experiment 2</title>
+</head>
+<body>
+    <h1>Experiment 2</h1>
+
+    <p>result</p>
+
+    <script>
+        // prompt user to guess what color the computer is "thinking of" & outputs message based on if the user is correct! (Credit: Krithika Govind)
+
+        var guess = prompt("What color am I thinking of? hint: it's one of the 6 colors of the rainbow!");
+
+        var colors = ["red", "blue", "yellow", "green", "orange", "purple"];
+
+        var compColor;
+
+        function compNum(min, max) {
+            var randomInt = Math.random();
+            var numOfValues = max - min + 1;
+            var randomNum = randomInt * numOfValues;
+            var randomRoundedNum = Math.floor(randomNum);
+            var randomFinalNum = min + randomRoundedNum;
+            // console.log(randomFinalNum)
+            // console.log(colors[randomFinalNum])
+            return compColor = colors[randomFinalNum]
+        }
+        compNum(0, colors.length-1)
+
+    // prints in the console
+        // if(guess === compColor) {
+        //     console.log(`You are right! My color was ${compColor}!`)
+        // }
+        // else {
+        //     console.log(`Sorry, the color I was thinking of was ${compColor}. Try Again!`)
+        // }
+
+        // if(guess === compColor) {
+        //     var result = document.getElementById('result')
+        //     result.innerHTML = `You are right! My color was ${compColor}!`
+        // }
+        // else {
+        //     var result = document.getElementById('result')
+        //     result.innerHTML = `Sorry, the color I was thinking of was ${compColor}. Try Again!`
+        // }
+
+        if(guess === compColor) {
+            var result;
+            result = `You are right! My color was ${compColor}!`;
+        }
+        else {
+            var result;
+            result = `Sorry, the color I was thinking of was ${compColor}. Try Again!`;
+        }
+
+        document.getElementsByTagName('p');
+        
+
+        console.log(compColor)
+    </script>
+
+</body>
+</html>

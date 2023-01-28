@@ -2,7 +2,7 @@ body {
     font-family: "Roboto Mono";
     width: 1100px;
     background-color: #D7E4EB;
-    color: #1F1815;
+    color: #222c39;
     font-weight: 500;
     margin: auto;
 }
@@ -27,11 +27,18 @@ body {
     animation: pop ease-in-out 2.5s;
 }
 
-@keyframes pop {
+/* @keyframes pop {
     0% {transform: scale(1); color: #ecc1ee}
     30% {transform: scale(1.2); color: #c8d8fc}
     60% {transform: scale(0.9); color: #bdd0fa}
     100% {transform: scale(1); color: #c8c3ff}
+} */
+
+@keyframes pop {
+    0% {transform: scale(1); color: #827264}
+    30% {transform: scale(1.2); color: #f8c192}
+    60% {transform: scale(0.9); color: #ffa251}
+    100% {transform: scale(1); color: #95541a}
 }
 
 #banner h2 {
@@ -157,7 +164,6 @@ section ul li a:hover {
 }
 
 footer {
-    height: 0px;
 }
 
 footer div.content {
