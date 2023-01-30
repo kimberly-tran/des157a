@@ -9,7 +9,9 @@
 <body>
     <h1>Experiment 2</h1>
 
-    <p>result</p>
+    <div id="result">
+        <p>result</p>
+    </div>
 
     <script>
         // prompt user to guess what color the computer is "thinking of" & outputs message based on if the user is correct! (Credit: Krithika Govind)
@@ -40,6 +42,7 @@
         //     console.log(`Sorry, the color I was thinking of was ${compColor}. Try Again!`)
         // }
 
+
         // if(guess === compColor) {
         //     var result = document.getElementById('result')
         //     result.innerHTML = `You are right! My color was ${compColor}!`
@@ -50,16 +53,13 @@
         // }
 
         if(guess === compColor) {
-            var result;
-            result = `You are right! My color was ${compColor}!`;
+            var result = document.getElementById('result');
+            result.innerHTML = `You are right! My color was ${compColor}!`;
         }
         else {
-            var result;
-            result = `Sorry, the color I was thinking of was ${compColor}. Try Again!`;
+            var result = document.getElementById('result');
+            result.innerHTML = `Sorry, the color I was thinking of was ${compColor}. Try Again!`;
         }
-
-        document.getElementsByTagName('p');
-        
 
         console.log(compColor)
     </script>
