@@ -21,14 +21,42 @@
 
     <header>
         <h1>leave a review!</h1>
+        <img src="images/matcha.png" alt="matcha" width="80" id="matcha">
+        <img src="images/pizza.png" alt="pizza" width="120" id="pizza">
     </header>
 
     <main>
-        <form>
-            <label for="noun">noun</label>
-            <input type="text" id="noun">
+        <p>please provide:</p>
 
-            <input type="submit">
+        <form>
+            <select id="time" required>
+                <option value="" selected>---</option>
+                <option value="morning">morning</option>
+                <option value="afternoon">afternoon</option>
+                <option value="evening" >evening</option>
+                <option value="night">night</option>
+            </select>
+            <label for="time">time of day</label>
+
+            <input type="text" id="place" required>
+            <label for="place">name of a place</label>
+
+            <input type="text" id="food1" required>
+            <label for="food1">food item (noun)</label>
+
+            <input type="text" id="adjective" required>
+            <label for="adjective">adjective</label>
+
+            <input type="text" id="food2" required>
+            <label for="food2">another food item (noun)</label>
+
+            <input type="text" id="verb" required>
+            <label for="verb">verb</label>
+
+            <input type="text" id="person" required>
+            <label for="person">name of someone you know</label>
+
+            <input type="submit" id="submit" value="generate my review">
         </form>
     </main>
     

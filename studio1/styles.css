@@ -1,0 +1,90 @@
+body {
+    background-color: #FFFCFB;
+    font-family: "Patrick Hand SC";
+    font-size: 20px;
+    color: #322019;
+    margin: 40px 80px;
+    display: flex;
+    letter-spacing: 0.5px;
+}
+
+header {
+    font-family: "Sacramento";
+    font-size: 48px;
+    /* width: 100px; */
+    text-align: center;
+    margin: 80px 100px 0px 50px;
+    transform: rotate(-12deg);
+    text-shadow: 4px 4px #BFAEA7;
+}
+
+main {
+    background-color: #BFAEA7;
+    width: 500px;
+    height: 530px;
+    padding: 30px 40px 40px 40px;
+    border-radius: 20px;
+}
+
+main p {
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 30px;
+    letter-spacing: 1.2px;
+}
+
+input, select {
+    /* display: block; */
+    margin-bottom: 30px;
+    background-color: #FFF5F0;
+    border: none;
+    border-radius: 4px;
+    height: 30px;
+    width: 200px;
+}
+
+input[type="submit"] {
+    padding: 18px;
+    line-height: 0px;
+    text-align: center;
+    letter-spacing: 1.2px;
+}
+
+label {
+    display: inline-block;
+    text-align: left;
+    margin-left: 12px;
+    width: 210px;
+}
+
+input[type="text"]:focus, select:focus, input[type="submit"]:focus {
+    border: 2px solid #69564e;
+    outline: 0;
+    box-shadow: 0 4px 8px 0 rgb(50, 32, 25, 0.2), 0 6px 20px 0 rgb(50, 32, 25, 0.2);
+}
+
+img#matcha {
+    animation: wiggle1 2s ease-in-out infinite;
+    margin: 12px;
+}
+
+img#pizza {
+    animation: wiggle2 2s ease-in-out infinite;
+    margin: 12px;
+}
+
+@keyframes wiggle1 {
+    0% {transform: rotate(0deg);}
+    /* 25% {transform: rotate(10deg);} */
+    50% {transform: rotate(20deg);}
+    /* 75% {transform: rotate(10deg);} */
+    100% {transform: rotate(0deg)}
+}
+
+@keyframes wiggle2 {
+    0% {transform: rotate(0deg);}
+    /* 25% {transform: rotate(-10deg);} */
+    50% {transform: rotate(-20deg);}
+    /* 75% {transform: rotate(-10deg);} */
+    100% {transform: rotate(0deg)}
+}
