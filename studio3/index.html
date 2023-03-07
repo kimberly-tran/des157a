@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <title>game on!: penguin hot coco</title>
+</head>
+<body>
+    <header>
+        <h1>HOT COCO BATTLE</h1>
+    </header>
+
+    <audio src="sounds/plop.mp3" id="plopaudio"></audio>
+    <audio src="sounds/swirl.mp3" id="swirlaudio"></audio>
+
+    <section id="gamerules">
+        <h3>GAME RULES</h3>
+        <p>1. Two players take turns rolling dice and adding to their score — after each roll, the current player can roll again or pass to the other player</p>
+        <p>2. The first player to reach the agreed upon point total wins</p>
+        <p>3. Rolling a "one" automatically ends a player’s turn OR Rolling two "ones" resets the current score to zero.</p> 
+    </section>
+
+    <section id="gamestart" class="showing">
+        <div>
+            <h3>START A GAME</h3>
+
+            <form>
+                <label for="player1">Player 1</label>
+                <input type="text" id="player1" required>
+
+                <label for="player2">Player 2</label>
+                <input type="text" id="player2" required>
+
+                <!-- <label for="winningpoints">Play To</label>
+                <input type="number" id="winningpoints" min="0" max="100" required> -->
+
+                <!-- <button id="startgame">START</button> -->
+                <input type="submit" id="start" value="START">
+            </form>
+        </div>
+    </section>
+
+    <section id="maingame" class="hidden">
+        <p id="playerOneName">PLAYER 1: </p>
+        <p id="playerTwoName">PLAYER 2: </p>
+        <img src="images/penguin1.png" alt="penguin" width="160" id="penguin1">
+        <img src="images/penguin2.png" alt="penguin" width="160" id="penguin2">
+        <div id="game"></div>
+        <div id="actions">
+            <!-- <button id="roll">Roll Dice</button> -->
+        </div>
+        <div id="score"></div>
+        <div id="gamecontrol"></div>
+    </section> 
+    
+</body>
+</html>

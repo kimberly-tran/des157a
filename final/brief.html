@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="styles.css" rel="stylesheet">
+    <title>Final Project Design Brief</title>
+</head>
+<body>
+    <header>
+        <h1>Final Project Design Brief</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#projectsummary" class="selected">Project Summary</a></li>
+            <li><a href="#comparison1">Comparison Project 1</a></li>
+            <li><a href="#comparison2">Comparison Project 2</a></li>
+            <li><a href="#projectgoals">Project Goals</a></li>
+            <li><a href="#designstrats">Design Strategies</a></li>
+            <li><a href="#interactionstrats">Interaction Strategies</a></li>
+            <li><a href="#experiencegoals">Experience Goals</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="projectsummary">
+            <h2>Project Summary</h2>
+            <p>I plan to update Studio Project 3: Game On! by creating a cleaner design, incorporating more visual and aural feedback, adding more options for player customization.</p>
+        </section>
+
+        <section id="comparison1">
+            <h2>Comparison Project 1</h2>
+            <p>Looking at this <a href="https://poki.com/en/g/mine-sweeper-3">Minesweeper</a> game, the concept and interactions needed in the game itself are very minimal. The UI is also very simple, but the small animations in each click and interaction offers the user a lot of feedback and an overall enjoyable experience. For example, every time the player clicks on a block to check for a “mine,” the block flies away. Additionally, on the button clicks there is a bounce animation as well as a clicking noise to indicate the users’ action, which was also a good touch to give the user feedback for their actions. As for other audio components, there are “positive” and “negative” sound feedback for when the player clicks on a “safe” block or a block with a mine in it. The audio track played throughout the game does not start until a player starts the game, and any time the player leaves the page, the music pauses which I thought was a nice feature, since when people switch tabs they are usually now switching their focus to something new. Another successful feature was the introduction of game rules (”tutorial”) at the beginning and then having them nested in the pause/settings later on instead.</p>
+            <div class="images">
+                <figure>
+                    <img src="images/gamerulesicon.png" alt="Minesweeper paused game" height="200">
+                    <figcaption><a href="https://poki.com/en/g/mine-sweeper-3">Minesweeper</a>, paused game and settings.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/gamerules.png" alt="Minesweeper game tutorial" height="200">
+                    <figcaption><a href="https://poki.com/en/g/mine-sweeper-3">Minesweeper</a>, tutorial.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="comparison2">
+            <h2>Comparison Project 2</h2>
+            <p>In this game, <a href="https://poki.com/en/g/squish-run">Squish Run</a>, both the mouse and keyboard are utilized — the mouse primarily for clicking and the keyboard for in-game movement. The graphics itself are very appealing, as they are bright pixel characters/illustrations and incorporate subtle animations to give a sense of movement and reality. Something that stood out to me that was working well was the option that users had of being able to switch between and unlock new character skins to play with. I think this offers another fun component to not only keep users still playing, but let them feel like they’re making the game their own. Overall, the playing experience uses minimal button keys and on-screen animations, but the variety in maps, use of levels and character upgrades, keeps players interested.</p>
+            <div class="images">
+                <figure>
+                    <img src="images/charactercustomization.png" alt="Squish Run character pool" height="400">
+                    <figcaption><a href="https://poki.com/en/g/squish-run">Squish Run</a>, character skin pool.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="projectgoals">
+            <h2>Project Goals</h2>
+            <p>For this project, I want to incorporate more subtle animations and audio components that will serve to provide the user with more effective feedback, as well as keep players more interested in the game as a whole. Similar to the minesweeper game, I plan to incorporate animations and audio on button clicks, and utilize different audio tracks to give the user either “positive” or “negative” feedback for when they win or lose (i.e. roll snake eyes). I also plan to include more options for the user to hide/view game instructions, control audio tracks, etc. Another goal I have for this project is to offer players more customization. Similar to the second example, Squish Run, I want to try and create color variations or maybe subtle changes in outfit in my characters, to create another element of interest and freedom for users to explore.</p>
+        </section>
+
+        <section id="designstrats">
+            <h2>Design Strategies</h2>
+            <p>As I am planning to incorporate options for the user to customize their character, I plan to choose color variations that are colorful but still maintain the more muted tones in the current design. I currently still like the personality that the more game-y/pixel type font VT323 offers the game design, so I plan to keep that in the current design system. I plan to match added iconography (e.g. for menu, pause, instructions, audio, and other icons) to this same pixel type style as well to create cohesion. I plan to leave the menu settings in the top right corner by the game title, as I want them to be clear and visible, but not a distracting part of the game or something that immediately attracts the player’s attention.</p>
+        </section>
+
+        <section id="interactionstrats">
+            <h2>Interaction Strategies</h2>
+            <p>To incorporate more user feedback, I plan to include subtle animations and audio on things like button clicks to provide the user with more visual and aural feedback. I also hope to include some ongoing animations within the game by using time-based behaviors to make the visuals a little less static. For example, having the penguins move subtly or playing with time-based behavior in audio tracks used. To incorporate the customization feature, I believe I will need to create another section that collects the user input for whichever color/outfit variation they choose for their character, and use JavaScript to assign/change the character designs accordingly.</p>
+        </section>
+
+        <section id="experiencegoals">
+            <h2>Experience Goals</h2>
+            <p>Through the design choices I’ve proposed, I hope to create a more enjoyable experience for my users. Nesting game rules and settings away not only clears up the visual design of the page, but also offers the user more freedom to navigate as they would like. By adding more subtle visual animations and audio cues, I hope to enhance the user experience by providing more feedback on user actions, as well as making the overall game more engaging. Additionally, I hope that the addition of character customization in allowing users to choose different character designs will offer another level of personalization that will make the game more fun and interesting.</p>
+        </section>
+    </main>
+</body>
+</html>
