@@ -8,9 +8,6 @@
     const score = document.getElementById('score');
     const actionArea = document.getElementById('actions');
 
-    const playerOneName = document.getElementById('playerOneName');
-    const playerTwoName = document.getElementById('playerTwoName');
-
     const plopAudio = document.getElementById('plopaudio');
     const swirlAudio = document.getElementById('swirlaudio');
 
@@ -33,12 +30,15 @@
         event.preventDefault();
         // getFormData();
 
+        let playerOneName = document.getElementById('playerOneName');
+        let playerTwoName = document.getElementById('playerTwoName');
+
         const playerOne = document.querySelector('#player1').value;
         const playerTwo = document.querySelector('#player2').value;
-        const winningPoints = document.querySelector('#winningpoints').value;
+        // const winningPoints = document.querySelector('#winningpoints').value;
 
-        playerOneName.innerHTML += playerOne;
-        playerTwoName.innerHTML += playerTwo;
+        playerOneName.innerHTML = playerOne;
+        playerTwoName.innerHTML = playerTwo;
     });
 
     // function getFormData() {
@@ -64,6 +64,7 @@
 
     // 
 
+    // after user clicks start, page switches from form to the game area
     startGame.addEventListener('click', function(){
         document.querySelector('#gamestart').className = "hidden";
         document.querySelector('#maingame').className = "showing";
@@ -81,18 +82,20 @@
         setUpTurn();
     });
 
+    // sets up initial turn, clarifies which player's turn it is
     function setUpTurn(){
         game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         // ${gameData.players[gameData.index]} is the current player whose turn it is
         actionArea.innerHTML = '<button id="roll">Roll</button>';
         document.getElementById('roll').addEventListener('click', function(){
-            // console.log('roll the dice');
+            // plop sound effect plays when 'roll is clicked' aka when dice are thrown
             plopAudio.volume = 0.3;
             plopAudio.play();
             throwDice();
         });
     }
 
+    // throw dice to randomize the dice throw
     function throwDice(){
         actionArea.innerHTML = '';
         gameData.roll1 = Math.floor(Math.random() * 6) + 1;
@@ -104,7 +107,6 @@
 
         // if two 1's are rolled ...
         if(gameData.rollSum === 2) {
-            // console.log("snake eyes!");
             game.innerHTML += '<p>oh snap! snake eyes!</p>'
             gameData.score[gameData.index] = 0;
             // ternary operator '?' if 1 (true) set it to 0 : if 0 (false) set it to 1
@@ -114,8 +116,8 @@
             swirlAudio.play();
             showCurrentScore();
         }
+        // if one 1 is rolled ...
         else if(gameData.roll1 === 1 || gameData.roll2 === 1) {
-            // console.log("wah wah your turn is over!");
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
             game.innerHTML += `<p>Sorry, one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
@@ -123,7 +125,6 @@
             swirlAudio.play();
         }
         else {
-            // console.log("game continues");
             gameData.score[gameData.index] = gameData.score[gameData.index] + gameData.rollSum;
             actionArea.innerHTML = '<button id="rollagain">Roll Again</button> <button id="pass">Pass</button>';
 
@@ -141,6 +142,7 @@
         }
     };
 
+    // checks if points have reached the winning point score; if so prints the winner, otherwise prints the current score
     function winningCondition(){
         if(gameData.score[gameData.index] > gameData.gameEnd) {
             score.innerHTML = `<h2>${gameData.players[gameData.index]} wins with ${gameData.score[gameData.index]} points!</h2>`;
@@ -149,7 +151,6 @@
             document.getElementById('quit').innerHTML = "New Game";
         }
         else {
-            // show current score ...
             showCurrentScore(); 
         }
     }
