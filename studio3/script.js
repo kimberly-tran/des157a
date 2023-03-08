@@ -34,6 +34,12 @@
         playerTwo = document.querySelector('#player2').value;
         gameData.players[0] = playerOne;
         gameData.players[1] = playerTwo;
+
+        var playerOneName = document.querySelector('#playerOneName');
+        var playerTwoName = document.querySelector('#playerTwoName');
+
+        playerOneName.innerHTML = playerOne;
+        playerTwoName.innerHTML = playerTwo;
 // 
         document.querySelector('#gamestart').className = "hidden";
         document.querySelector('#maingame').className = "showing";
