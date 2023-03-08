@@ -10,35 +10,13 @@
 
     const plopAudio = document.getElementById('plopaudio');
     const swirlAudio = document.getElementById('swirlaudio');
-    var playerOne = "";
-    var playerTwo = "";
+    let playerOne = "";
+    let playerTwo = "";
     
     // console.log(gameData.players);
-
-    const form = document.querySelector('form');
-
-    form.addEventListener('submit', function(event){
-        event.preventDefault();
-        // getFormData();
-
-        // let playerOneName = document.getElementById('playerOneName');
-        // //console.log(playerOneName.innerHTML);
-        // let playerTwoName = document.getElementById('playerTwoName');
-
-        playerOne = document.querySelector('#player1').value;// Correct Value.
-        console.log(playerOneName);
-
-        playerTwo = document.querySelector('#player2').value; //Correc Value
-        // const winningPoints = document.querySelector('#winningpoints').value;
-
-        // playerOneName.innerHTML = playerOne;
-        // playerTwoName.innerHTML = playerTwo;
-    
-    });
-
     const gameData = {
         dice: ['images/die1.png', 'images/die2.png', 'images/die3.png', 'images/die4.png', 'images/die5.png', 'images/die6.png'],
-        players: ["player1", "player2"],
+        players: ["player1","player2"],
         score: [0, 0],
         roll1: 0,
         roll2: 0,
@@ -47,27 +25,16 @@
         gameEnd: 30
     }
 
-    // function getFormData() {
-    //     const playerOne = document.querySelector('#player1').value;
-    //     const playerTwo = document.querySelector('#player2').value;
-    //     const winningPoints = document.querySelector('#winningpoints').value;
-    //     // console.log(`hello ${playerOne}`);
-    //     // console.log(playerOne, playerTwo, winningPoints)
+    const form = document.querySelector('form');
 
-    //     return playerOne;
-    // }
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
 
-    // let values = getFormData();
-    // console.log(values);
-
-    // const playerOne = values[0];
-    // const playerTwo = values[1];
-    // const winningPoints = values[2];
-
-    // 
-
-    // after user clicks start, page switches from form to the game area
-    startGame.addEventListener('click', function(){
+        playerOne = document.querySelector('#player1').value;
+        playerTwo = document.querySelector('#player2').value;
+        gameData.players[0] = playerOne;
+        gameData.players[1] = playerTwo;
+// 
         document.querySelector('#gamestart').className = "hidden";
         document.querySelector('#maingame').className = "showing";
         gameData.index = Math.round(Math.random());
@@ -79,28 +46,14 @@
             location.reload();
         });
 
-        // console.log(gameData.index);
-        // console.log('set up the turn');
+        gameData.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+       
         setUpTurn();
     });
-//beverage = age >= 21 ? "Beer" : "Juice";
+  
     // sets up initial turn, clarifies which player's turn it is
     function setUpTurn(){
-        console.log(gameData.index);
-        if(gameData.index)
-        {
-            game.innerHTML = `<p>Roll the dice for the ${playerOne}</p>`;
-            console.log(gameData.index);
-            
-        }
-        else
-        {
-            game.innerHTML = `<p>Roll the dice for the ${playerTwo}</p>`;
-            console.log(gameData.index);
-        }
-        //game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
-       // game.innerHTML = `<p>Roll the dice for the ${"FGH"}</p>`;
-        // ${gameData.players[gameData.index]} is the current player whose turn it is
+        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
         actionArea.innerHTML = '<button id="roll">Roll</button>';
         document.getElementById('roll').addEventListener('click', function(){
             // plop sound effect plays when 'roll is clicked' aka when dice are thrown
