@@ -53,14 +53,14 @@
             location.reload();
         });
 
-        gameData.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+        gameData.innerHTML = `<p>${gameData.players[gameData.index]}'s Turn</p>`;
        
         setUpTurn();
     });
   
     // sets up initial turn, clarifies which player's turn it is
     function setUpTurn(){
-        game.innerHTML = `<p>Roll the dice for the ${gameData.players[gameData.index]}</p>`;
+        game.innerHTML = `<p>${gameData.players[gameData.index]}'s Turn</p>`;
         actionArea.innerHTML = '<button id="roll">Roll</button>';
         document.getElementById('roll').addEventListener('click', function(){
             // plop sound effect plays when 'roll is clicked' aka when dice are thrown
