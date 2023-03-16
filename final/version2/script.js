@@ -93,7 +93,7 @@
 
         // if two 1's are rolled ...
         if(gameData.rollSum === 2) {
-            game.innerHTML += '<p>oh snap! snake eyes!</p>'
+            game.innerHTML += '<p>Uh oh! You rolled two ones and lost all your marshmallows!</p>'
             gameData.score[gameData.index] = 0;
             // ternary operator '?' if 1 (true) set it to 0 : if 0 (false) set it to 1
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
@@ -103,7 +103,7 @@
         // if one 1 is rolled ...
         else if(gameData.roll1 === 1 || gameData.roll2 === 1) {
             gameData.index ? (gameData.index = 0) : (gameData.index = 1);
-            game.innerHTML += `<p>Sorry, one of your rolls was a one. Switching to ${gameData.players[gameData.index]}</p>`;
+            game.innerHTML += `<p>Sorry, you rolled a one. Switching to ${gameData.players[gameData.index]}</p>`;
             setTimeout(setUpTurn, 2000);
         }
         // any other roll
