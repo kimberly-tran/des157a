@@ -1,6 +1,7 @@
 (function(){
     'use strict';
     console.log('js is running');
+    alert("Tasks:   1. Imagine this is your first time hearing about and playing this game, and you’re not completely sure how it works. Please find the game rules/instructions.   2. You are looking for ways to make your gameplay experience more personal. How would you go about trying to customize your game experience with the given interface?")
 
     const startGame = document.getElementById('start');
     const gameControl = document.getElementById('gamecontrol');

@@ -126,7 +126,7 @@ fieldset input[type="radio"]:checked+label {
     background-color: #22222220;
 }
 
-button:hover {
+button:hover, input[type="submit"]:hover, #mapicon, #rulesicon, #mutedicon, #unmutedicon {
     cursor: pointer;
 }
 
