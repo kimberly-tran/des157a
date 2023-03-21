@@ -1,0 +1,233 @@
+body {
+    font-family: "VT323";
+    font-size: 24px;
+    letter-spacing: 4px;
+    background-color: #D9E7EB;
+    color: #222;
+    margin-top: 40px;
+    /* centering */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1ch;
+    background-image: url(images/tundraback.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0 -150px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+h1 {
+    /* font-family: "Press Start 2P"; */
+    font-size: 36px;
+    margin: 0;
+    text-align: center;
+    letter-spacing: 8px;
+    animation: float 3s infinite ease-out;
+}
+
+@keyframes float {
+    0% {transform: translate(0px, 0px)}
+    50% {transform: translate(0px, 20px)}
+    100% {transform: translate(0px, 0px)}
+}
+
+h2, h3 {
+    font-size: 28px;
+    text-align: center;
+}
+
+
+/* styling top right icons */
+
+#mutedicon, #unmutedicon {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+}
+
+#mapicon {
+    position: absolute;
+    right: 120px;
+    top: 40px;
+}
+
+#rulesicon {
+    position: absolute;
+    right: 200px;
+    top: 40px;
+}
+
+
+#gamestart {
+    margin: 80px;
+}
+
+#gamerules, #gametheme {
+    padding: 40px 100px;
+    margin: 0 200px;
+    background-image: url(images/overlayback.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 100%;
+    position: absolute;
+    top: 110px;
+    z-index: 1;
+    /* border-bottom: #222 solid; */
+}
+
+#gamerules p {
+    font-size: 22px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.showing {
+    display: block;
+}
+
+.hidden {
+    display: none;
+}
+
+#maingame, #gamecontrol {
+    margin: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    text-align: center;
+}
+
+
+/* styling form input & buttons*/
+
+label {
+    display: inline-block;
+    text-align: left;
+    margin: 8px 0;
+    width: 212px;
+}
+
+input, button {
+    display: block;
+    background-color: #FFFDF9;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 4px 4px #222;
+    filter: drop-shadow(-2px -2px 4px #22222220);
+    height: 30px;
+    width: 212px;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+button:hover, input[type="submit"]:hover, #mapicon, #rulesicon, #mutedicon, #unmutedicon {
+    cursor: pointer;
+}
+
+button:active, input[type="submit"]:active, #mapicon:active, #rulesicon:active, #mutedicon:active, #unmutedicon:active {
+    transform: translate(0, 4px);
+}
+
+#closerules, #savetheme {
+    /* display:block; */
+    margin: auto;
+    margin-top: 50px;
+}
+
+
+/* styling the fieldset radios */
+
+fieldset {
+    border: none;
+    padding: 40px 20px;
+}
+
+fieldset label {
+    margin-right: 20px;
+    padding: 10px 20px;
+    background-color: #FFFDF9;
+    /* border: 2px solid #222; */
+    box-shadow: 4px 4px #222;
+    filter: drop-shadow(-2px -2px 4px #22222220);
+    border-radius: 8px;
+}
+
+fieldset label:hover {
+    background-color: #22222220;
+    cursor: pointer;
+}
+
+fieldset input,
+fieldset label {
+    display: inline;
+}
+
+input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+}
+
+fieldset input[type="radio"]:checked+label {
+    background-color: #22222220;
+}
+
+
+/* styling the game area -- illustrations, score, etc */
+
+#penguin1 {
+    position: absolute;
+    top: 350px;
+    left: -60px;
+}
+
+#penguin2 {
+    position: absolute;
+    top: 350px;
+    left: 1340px;
+}
+
+#dice1 {
+    position: absolute;
+    top: 300px;
+    left: 90px;
+}
+
+#dice2 {
+    position: absolute;
+    top: 286px;
+    left: 1048px;
+    transform: rotate(180deg);
+}
+
+#quit {
+    position: absolute;
+    bottom: 80px;
+}
+
+
+/* styling the footer (audio sources & valid HTML) */
+
+footer {
+    font-size: 18px;
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    letter-spacing: 2px;
+    position: absolute;
+    bottom: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #222;
+}
+
+a:hover {
+    color:#FFFDF9
+}

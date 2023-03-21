@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+
+    <title>game on!: marshmallow madness</title>
+</head>
+<body>
+    <header>
+        <h1>MARSHMALLOW MADNESS</h1>
+    </header>
+
+    <audio src="sounds/plop.mp3" id="plopaudio"></audio>
+    <audio src="sounds/tundramusic.mp3" id="tundraaudio"></audio>
+    <audio src="sounds/beachmusic.mp3" id="beachaudio"></audio>
+    <audio src="sounds/junglemusic.mp3" id="jungleaudio"></audio>
+    <audio src="sounds/coastalmusic.mp3" id="coastalaudio"></audio>
+
+    <img src="images/unmutedicon.svg" alt="mute" width="60" id="unmutedicon">
+    <img src="images/mutedicon.svg" alt="unmute" width="60" id="mutedicon">
+    <img src="images/customizationicon.svg" alt="map theme" width="60" id="mapicon">
+    <img src="images/rulesicon.svg" alt="game rules" width="60" id="rulesicon">
+
+    <section id="gamerules" class="hidden">
+        <h3>GAME RULES</h3>
+        <p>1. Two players take turns rolling and adding marshmallows to their score. After each roll, the current player can roll again or pass to the other player.</p>
+        <p>2. The first player to reach 50 points wins.</p>
+        <p>3. Rolling a "one" automatically ends a player’s turn OR Rolling two "ones" resets the current score to zero.</p> 
+        <button id="closerules">CLOSE</button>
+    </section>
+
+    <section id="gametheme" class="hidden">
+        <div>
+            <h3>CHOOSE A THEME</h3>
+
+            <form id="themeform">
+                <fieldset>
+                    <input type="radio" name="theme" id="tundra" value="tundra">
+                    <label for="tundra">TUNDRA</label>
+            
+                    <input type="radio" name="theme" id="beach" value="beach">
+                    <label for="beach">BEACH</label>
+            
+                    <input type="radio" name="theme" id="jungle" value="jungle">
+                    <label for="jungle">JUNGLE</label>
+            
+                    <input type="radio" name="theme" id="coast" value="coastal">
+                    <label for="coast">COAST</label>
+                </fieldset>
+
+                <input type="submit" id="savetheme" value="SAVE">
+            </form>
+        </div>
+    </section>
+
+    <section id="gamestart" class="showing">
+        <div>
+            <h3>START A GAME</h3>
+
+            <form id="nameform">
+                <label for="player1">Player 1</label>
+                <input type="text" id="player1" required>
+
+                <label for="player2">Player 2</label>
+                <input type="text" id="player2" required>
+
+                <!-- <label for="winningpoints">Play To</label>
+                <input type="number" id="winningpoints" min="0" max="100" required> -->
+
+                <!-- <button id="startgame">START</button> -->
+                <input type="submit" id="start" value="START">
+            </form>
+        </div>
+    </section>
+
+    <section id="maingame" class="hidden">
+
+        <img src="images/penguin1.png" alt="penguin" width="160" id="penguin1">
+        <img src="images/penguin2.png" alt="penguin" width="160" id="penguin2">
+        <div id="game"></div>
+        <div id="actions">
+            <!-- <button id="roll">Roll Dice</button> -->
+        </div>
+        <div id="score"></div>
+        <div id="gamecontrol"></div>
+    </section> 
+
+    <footer>
+        <p><a href="sources.html">AUDIO SOURCES</a></p>
+        <p><a href="https://validator.w3.org/check?uri=referer">VALID HTML</a></p>
+    </footer>
+    
+</body>
+</html>
